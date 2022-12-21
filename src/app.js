@@ -49,6 +49,14 @@ function game(val) {
   }
 }
 
+let open = false;
+
 function view_RPS() {
-  document.querySelector(".rock_paper_scissor_game").style.display = "flex";
+  if (open == false) {
+    document.querySelector(".rock_paper_scissor_game").style.display = "flex";
+    open = true;
+  } else if (open == true) {
+    document.querySelector(".rock_paper_scissor_game").style.display = "none";
+    open = false;
+  }
 }
