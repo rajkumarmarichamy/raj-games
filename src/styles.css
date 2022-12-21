@@ -1,0 +1,175 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+:root {
+  --border: solid black 2px;
+  --box_shawdow: 6px 5px 10px -4px rgba(0, 0, 0, 0.75);
+}
+
+.entire {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  flex-basis: 100%;
+  height: auto;
+}
+
+.l_sidebar,
+.r_sidebar {
+  display: none;
+  flex-basis: 20%;
+  border: var(--border);
+}
+
+.content {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  padding: 10px;
+}
+
+h1 {
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+.intro {
+  display: flex;
+  border: var(--border);
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: #1042b5;
+}
+
+.intro > h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.game_selection_cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: var(--border);
+  padding: 10px;
+  margin-top: 10px;
+  background-color: gold;
+  color: rgb(250, 251, 252);
+}
+
+.game_selection_cont > .button {
+  border: var(--border);
+  font-size: 0.75rem;
+  font-weight: bold;
+  width: auto;
+  padding: 15px;
+  border-radius: 25%;
+  background-color: rgb(211, 21, 135);
+}
+
+.rock_paper_scissor_game {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  border: var(--border);
+  margin-top: 10px;
+  height: 350px;
+}
+
+.rock_paper_scissor_game_console {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: var(--border); */
+}
+
+.answer,
+.comment {
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+.button_display_cont {
+  display: flex;
+  flex-direction: row;
+  /* border: var(--border); */
+  padding: 5px;
+  margin: 5px;
+}
+
+.rock_button,
+.paper_button,
+.scissor_button {
+  display: flex;
+  border-radius: 48% 52% 14% 86% / 33% 79% 21% 67%;
+  border: var(--border);
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  width: 50%;
+  height: 50px;
+  font-weight: bold;
+}
+
+.rock_button {
+  background-color: #98aba1;
+}
+
+.paper_button {
+  background-color: #ffff;
+}
+
+.scissor_button {
+  background-color: #1042b5;
+}
+
+.point_display_cont {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8rem;
+  /* border: var(--border); */
+  justify-content: space-between;
+  padding: 5px;
+  margin: 5px;
+}
+
+.win,
+.lose,
+.draw {
+  border: var(--border);
+  padding: 2.2px;
+  margin: 2.5px;
+  flex-basis: 30%;
+  text-align: center;
+}
+
+@media only screen and (min-width: 800px) {
+  .l_sidebar,
+  .r_sidebar {
+    display: flex;
+    flex-basis: 15%;
+  }
+
+  .content {
+    flex-basis: 70%;
+    display: flex;
+    border: var(--border);
+  }
+}
