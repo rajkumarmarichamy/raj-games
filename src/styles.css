@@ -80,6 +80,11 @@ h1 {
   background-color: rgb(211, 21, 135);
 }
 
+.game_selection_cont > .button:active {
+  transition-duration: 0.01s;
+  transform: rotateY(30deg);
+}
+
 .rock_paper_scissor_game {
   display: none;
   flex-direction: column;
@@ -109,6 +114,7 @@ h1 {
 .button_display_cont {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   /* border: var(--border); */
   padding: 5px;
   margin: 5px;
@@ -118,26 +124,35 @@ h1 {
 .paper_button,
 .scissor_button {
   display: flex;
-  border-radius: 48% 52% 14% 86% / 33% 79% 21% 67%;
+  /* border-radius: 48% 52% 14% 86% / 33% 79% 21% 67%; */
+  border-radius: 10%;
   border: var(--border);
   justify-content: center;
   align-items: center;
   font-size: 0.8rem;
-  width: 50%;
+  width: 30%;
   height: 50px;
+  background-color: black;
+  color: whitesmoke;
   font-weight: bold;
 }
 
-.rock_button {
+.rock_button:active {
   background-color: #98aba1;
+  transition-duration: 0.1s;
+  transform: rotate(20deg);
 }
 
-.paper_button {
-  background-color: #ffff;
+.paper_button:active {
+  background-color: #98aba1;
+  transform: rotate(20deg);
+  transition-duration: 0.1s;
 }
 
-.scissor_button {
-  background-color: #1042b5;
+.scissor_button:active {
+  background-color: #98aba1;
+  transform: rotate(20deg);
+  transition-duration: 0.1s;
 }
 
 .point_display_cont {
@@ -158,18 +173,32 @@ h1 {
   margin: 2.5px;
   flex-basis: 30%;
   text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: rgb(36, 32, 32);
 }
 
-/* @media only screen and (min-width: 800px) {
+.win {
+  background-color: green;
+}
+
+.lose {
+  background-color: red;
+}
+
+.draw {
+  background-color: yellow;
+}
+
+@media only screen and (min-width: 800px) {
   .l_sidebar,
   .r_sidebar {
     display: flex;
     flex-basis: 15%;
   }
-
   .content {
     flex-basis: 70%;
     display: flex;
     border: var(--border);
   }
-} */
+}
