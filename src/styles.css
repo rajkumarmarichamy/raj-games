@@ -23,15 +23,16 @@ body {
 .r_sidebar {
   display: none;
   flex-basis: 20%;
-  border: var(--border);
+  /* border: var(--border); */
 }
 
 .content {
   flex-basis: 100%;
   display: flex;
   flex-direction: column;
-  border: var(--border);
+  /* border: var(--border); */
   padding: 10px;
+  align-items: center;
 }
 
 h1 {
@@ -68,6 +69,7 @@ h1 {
   margin-top: 10px;
   background-color: gold;
   color: rgb(250, 251, 252);
+  box-shadow: var(--box_shawdow);
 }
 
 .game_selection_cont > .button {
@@ -78,6 +80,7 @@ h1 {
   padding: 15px;
   border-radius: 25%;
   background-color: rgb(211, 21, 135);
+  box-shadow: 2px 4px 12px -1px rgba(0, 0, 0, 0.6) inset;
 }
 
 .game_selection_cont > .button:active {
@@ -90,8 +93,10 @@ h1 {
   flex-direction: column;
   justify-content: center;
   border: var(--border);
+  box-shadow: var(--box_shawdow);
   margin-top: 10px;
   height: 350px;
+  width: 100%;
 }
 
 .rock_paper_scissor_game_console {
@@ -133,6 +138,7 @@ h1 {
   width: 30%;
   height: 50px;
   background-color: black;
+  box-shadow: 2px 4px 12px -1px rgba(255, 255, 255, 0.6) inset;
   color: whitesmoke;
   font-weight: bold;
 }
@@ -196,9 +202,18 @@ h1 {
     display: flex;
     flex-basis: 15%;
   }
+
+  .entire {
+    align-items: center;
+  }
   .content {
     flex-basis: 70%;
     display: flex;
     border: var(--border);
+  }
+
+  .game_selection_cont,
+  .rock_paper_scissor_game {
+    width: 50%;
   }
 }
